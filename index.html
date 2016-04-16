@@ -15,7 +15,7 @@ $(document).ready(function(){
 		switch ($("#unit").val()){
 		case "02":
 			$("#code").children().remove();
-			$("#code").append($("<option></option>").val("NONE").html("Select Sample Point"));
+			$("#code").append($("<option></option>").val("NONE").html("Select Sample Point").attr("disabled", true));
 			$("#code").append($("<option></option>").val("W16naphtha").html("W-16 Overhead"));
 			$("#code").append($("<option></option>").val("W16diesel").html("W-16 Diesel"));
 			$("#code").append($("<option></option>").val("W27naphtha").html("W-27 Overhead"));
@@ -23,13 +23,13 @@ $(document).ready(function(){
 			break;
 		case "25":
 			$("#code").children().remove();
-			$("#code").append($("<option></option>").val("NONE").html("Select Sample Point"));
+			$("#code").append($("<option></option>").val("NONE").html("Select Sample Point").attr("disabled", true));
 			$("#code").append($("<option></option>").val("D2504").html("D-2504 Bottoms"));
 			$("#code").append($("<option></option>").val("D2505").html("D-2505 Side Draw"));
 			break;
 		case "33":
 			$("#code").children().remove();
-			$("#code").append($("<option></option>").val("NONE").html("Select Sample Point"));
+			$("#code").append($("<option></option>").val("NONE").html("Select Sample Point").attr("disabled", true));
 			$("#code").append($("<option></option>").val("X765product").html("X-765 Product"));
 			$("#code").append($("<option></option>").val("D457overhead").html("D-457 Overhead"));
 			$("#code").append($("<option></option>").val("W82bottoms").html("W-82 Bottoms"));
@@ -37,14 +37,14 @@ $(document).ready(function(){
 			break;
 		case "45":
 			$("#code").children().remove();
-			$("#code").append($("<option></option>").val("NONE").html("Select Sample Point"));
+			$("#code").append($("<option></option>").val("NONE").html("Select Sample Point").attr("disabled", true));
 			$("#code").append($("<option></option>").val("D451kerosene").html("D-451 Kerosene"));
 			$("#code").append($("<option></option>").val("D457overhead").html("D-457 Overhead"));
 			$("#code").append($("<option></option>").val("X755product").html("X-755 Product"));
 			break;
 		default:
 			$("#code").children().remove();
-			$("#code").append($("<option></option>").val("NONE").html("Select Sample Point"));
+			$("#code").append($("<option></option>").val("NONE").html("Select Sample Point").attr("disabled", true));
 			break;
 		}
 	});
@@ -55,13 +55,13 @@ $(document).ready(function(){
 		switch ($("#test").val()){
 		case "D4259":
 			$("#det").children().remove();
-			$("#det").append($("<option></option>").val("NONE").html("Select Determinant"));
+			$("#det").append($("<option></option>").val("NONE").html("Select Determinant").attr("disabled", true));
 			$("#det").append($("<option></option>").val("api").html("API Gravity"));
 			$("#det").append($("<option></option>").val("density").html("Density"));
 			break;
 		case "D86":
 			$("#det").children().remove();
-			$("#det").append($("<option></option>").val("NONE").html("Select Determinant"));
+			$("#det").append($("<option></option>").val("NONE").html("Select Determinant").attr("disabled", true));
 			$("#det").append($("<option></option>").val("ibp").html("Initial Boiling Point"));
 			$("#det").append($("<option></option>").val("10pct").html("10% Point"));
 			$("#det").append($("<option></option>").val("50pct").html("50% Point"));
@@ -70,12 +70,12 @@ $(document).ready(function(){
 			break;
 		case "D93":
 			$("#det").children().remove();
-			$("#det").append($("<option></option>").val("NONE").html("Select Determinant"));
+			$("#det").append($("<option></option>").val("NONE").html("Select Determinant").attr("disabled", true));
 			$("#det").append($("<option></option>").val("flash").html("Flash Point"));
 			break;
 		default:
 			$("#det").children().remove();
-			$("#det").append($("<option></option>").val("NONE").html("Select Determinant"));
+			$("#det").append($("<option></option>").val("NONE").html("Select Determinant").attr("disabled", true));
 			break;
 		}
 	});
@@ -109,23 +109,23 @@ $(document).ready(function(){
 	<div data-role="content">
 	  <h3>Header</h3>
       <select id="unit" name="unit">
-      	<option value="NONE">Select Unit</option>
+      	<option value="NONE" disabled="true" selected="true">Select Unit</option>
       	<option value="02">02</option>
       	<option value="25">25</option>
       	<option value="33">33</option>
       	<option value="45">45</option>
       </select>
       <select name="code" id="code">
-      	<option value="NONE">Select Sample Point</option>
+      	<option value="NONE"  disabled="true" selected="true">Select Sample Point</option>
       </select>
       <select id="test" name="test">
-      	<option value="NONE">Select Test</option>
+      	<option value="NONE" disabled="true" selected="true">Select Test</option>
       	<option value="D4259">API Gravity/Density</option>
       	<option value="D86">Distillation</option>
       	<option value="D93">Pensky Martens Flash</option>
       </select>
       <select id="det" name="det">
-      	<option value="NONE">Select Determinant</option>
+      	<option value="NONE"  disabled="true" selected="true">Select Determinant</option>
       </select>
         
 	</div>
