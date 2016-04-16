@@ -87,9 +87,9 @@ $(document).ready(function(){
 <body> 
 
 <div id="page" data-role="page" data-theme="b">
-	<div data-role="header" data-theme="b">
-	  <div class="logo"><img src="images/header.png" width="218" height="45" alt=""/></div>
-	</div>
+	<div class="logo"><img src="images/header.png" width="218" height="45" alt=""/></div>
+	<div data-role="header" data-theme="b" data-add-back-btn="true" data-transition="slide">
+    </div>
 	<div data-role="content">	
 		<ul data-role="listview" data-theme="c">
 			<li><a href="#search" data-transition="slide">Search Data</a></li>
@@ -103,11 +103,11 @@ $(document).ready(function(){
 </div>
 
 <div id="search" data-role="page" data-theme="b">
-	<div data-role="header" data-theme="b" data-add-back-btn="true" data-back-btn-text="Main" data-transition="slide">
-	  <div class="logo"><img src="images/header.png" width="218" height="45" alt=""/></div>
-	</div>
+	<div class="logo"><img src="images/header.png" width="218" height="45" alt=""/></div>
+	<div data-role="header" data-theme="b" data-add-back-btn="true" data-transition="slide">	
+	  <h3>Search Data</h3>
+    </div>
 	<div data-role="content">
-	  <h3>Header</h3>
       <select id="unit" name="unit">
       	<option value="NONE" disabled="true" selected="true">Select Unit</option>
       	<option value="02">02</option>
@@ -135,13 +135,11 @@ $(document).ready(function(){
 </div>
 
 <div id="about" data-role="page" data-theme="b">
+	<div class="logo"><img src="images/header.png" width="218" height="45" alt=""/></div>
 	<div data-role="header" data-theme="b" data-add-back-btn="true" data-transition="slide">
-		<h1>Section 2</h1>
-	</div>
-	<div data-role="content">	
-	  <h3>Header</h3>
-	  <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec massa tincidunt, porttitor enim sit amet, pellentesque nunc. Proin varius mollis ultricies. In aliquam dapibus orci, quis dictum dui sollicitudin vel. Vivamus nec malesuada leo. Nulla est orci, ornare ut ultricies a, bibendum in sem. Donec convallis pharetra ligula in malesuada. Ut hendrerit dui et aliquam dignissim. Aenean a metus eget felis tempor pellentesque nec iaculis ipsum. </p>
-	  <h3>Header</h3>
+      <h3>About Us</h3>
+    </div>
+	<div data-role="content">
 	  <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec massa tincidunt, porttitor enim sit amet, pellentesque nunc. Proin varius mollis ultricies. In aliquam dapibus orci, quis dictum dui sollicitudin vel. Vivamus nec malesuada leo. Nulla est orci, ornare ut ultricies a, bibendum in sem. Donec convallis pharetra ligula in malesuada. Ut hendrerit dui et aliquam dignissim. Aenean a metus eget felis tempor pellentesque nec iaculis ipsum. </p>
 	</div>
 	<div data-role="footer" data-theme="b">
@@ -150,19 +148,17 @@ $(document).ready(function(){
 </div>
 
 <div id="contact" data-role="page" data-theme="b">
-	<div data-role="header" data-theme="b" data-add-back-btn="true" data-transition="slide">
-		<h1>Section 3</h1>
-	</div>
-	<div data-role="content">	
-	  <h3>Header</h3>
-	  <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec massa tincidunt, porttitor enim sit amet, pellentesque nunc. Proin varius mollis ultricies. In aliquam dapibus orci, quis dictum dui sollicitudin vel. Vivamus nec malesuada leo. Nulla est orci, ornare ut ultricies a, bibendum in sem. Donec convallis pharetra ligula in malesuada. Ut hendrerit dui et aliquam dignissim. Aenean a metus eget felis tempor pellentesque nec iaculis ipsum. </p>
-	  <h3>Header</h3>
-	  <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec massa tincidunt, porttitor enim sit amet, pellentesque nunc. Proin varius mollis ultricies. In aliquam dapibus orci, quis dictum dui sollicitudin vel. Vivamus nec malesuada leo. Nulla est orci, ornare ut ultricies a, bibendum in sem. Donec convallis pharetra ligula in malesuada. Ut hendrerit dui et aliquam dignissim. Aenean a metus eget felis tempor pellentesque nec iaculis ipsum. </p>
+	<div class="logo"><img src="images/header.png" width="218" height="45" alt=""/></div>
+	<div data-role="header" data-theme="b" data-add-back-btn="true" data-transition="slide">	
+	  <h3>Contact Info</h3>
+    </div>
+	<div data-role="content">
+	  Developer - Kenneth Hart<br>
+      Email Address - kenneth.hart@smail.rasmussen.edu
       </div>
 	<div data-role="footer" data-theme="b">
 	  <h4>Your App &copy; 2015</h4>
 	</div>
 </div>
-
 </body>
 </html>
