@@ -8,23 +8,93 @@
 <link href="styles/custom.css" rel="stylesheet" type="text/css"/>
 <script src="jquery/jquery-1.12.3.min.js" type="text/javascript"></script>
 <script src="jquery/jquery.mobile-1.4.5.min.js" type="text/javascript"></script>
-</head> 
+
+<script>
+$(document).ready(function(){
+	$("#unit").change(function(){
+		switch ($("#unit").val()){
+		case "02":
+			$("#code").children().remove();
+			$("#code").append($("<option></option>").val("NONE").html("Select Sample Point"));
+			$("#code").append($("<option></option>").val("W16naphtha").html("W-16 Overhead"));
+			$("#code").append($("<option></option>").val("W16diesel").html("W-16 Diesel"));
+			$("#code").append($("<option></option>").val("W27naphtha").html("W-27 Overhead"));
+			$("#code").append($("<option></option>").val("W27kerosene").html("W-27 Kerosene"));
+			break;
+		case "25":
+			$("#code").children().remove();
+			$("#code").append($("<option></option>").val("NONE").html("Select Sample Point"));
+			$("#code").append($("<option></option>").val("D2504").html("D-2504 Bottoms"));
+			$("#code").append($("<option></option>").val("D2505").html("D-2505 Side Draw"));
+			break;
+		case "33":
+			$("#code").children().remove();
+			$("#code").append($("<option></option>").val("NONE").html("Select Sample Point"));
+			$("#code").append($("<option></option>").val("X765product").html("X-765 Product"));
+			$("#code").append($("<option></option>").val("D457overhead").html("D-457 Overhead"));
+			$("#code").append($("<option></option>").val("W82bottoms").html("W-82 Bottoms"));
+			$("#code").append($("<option></option>").val("W82sidedraw").html("W-82 Side Draw"));
+			break;
+		case "45":
+			$("#code").children().remove();
+			$("#code").append($("<option></option>").val("NONE").html("Select Sample Point"));
+			$("#code").append($("<option></option>").val("D451kerosene").html("D-451 Kerosene"));
+			$("#code").append($("<option></option>").val("D457overhead").html("D-457 Overhead"));
+			$("#code").append($("<option></option>").val("X755product").html("X-755 Product"));
+			break;
+		default:
+			$("#code").children().remove();
+			$("#code").append($("<option></option>").val("NONE").html("Select Sample Point"));
+			break;
+		}
+	});
+});
+
+$(document).ready(function(){
+	$("#test").change(function(){
+		switch ($("#test").val()){
+		case "D4259":
+			$("#det").children().remove();
+			$("#det").append($("<option></option>").val("NONE").html("Select Determinant"));
+			$("#det").append($("<option></option>").val("api").html("API Gravity"));
+			$("#det").append($("<option></option>").val("density").html("Density"));
+			break;
+		case "D86":
+			$("#det").children().remove();
+			$("#det").append($("<option></option>").val("NONE").html("Select Determinant"));
+			$("#det").append($("<option></option>").val("ibp").html("Initial Boiling Point"));
+			$("#det").append($("<option></option>").val("10pct").html("10% Point"));
+			$("#det").append($("<option></option>").val("50pct").html("50% Point"));
+			$("#det").append($("<option></option>").val("90pct").html("90% Point"));
+			$("#det").append($("<option></option>").val("fbp").html("Final Boiling Point"));
+			break;
+		case "D93":
+			$("#det").children().remove();
+			$("#det").append($("<option></option>").val("NONE").html("Select Determinant"));
+			$("#det").append($("<option></option>").val("flash").html("Flash Point"));
+			break;
+		default:
+			$("#det").children().remove();
+			$("#det").append($("<option></option>").val("NONE").html("Select Determinant"));
+			break;
+		}
+	});
+});
+
+</script>
+
+</head>
 <body> 
 
 <div id="page" data-role="page" data-theme="b">
 	<div data-role="header" data-theme="b">
-	  <div class="logo"><img src="images/rasmussen_logo.png" width="218" height="45" alt=""/></div>
+	  <div class="logo"><img src="images/header.png" width="218" height="45" alt=""/></div>
 	</div>
 	<div data-role="content">	
 		<ul data-role="listview" data-theme="c">
-			<li><a href="#section1" data-transition="slide">Section 1</a></li>
-            <li><a href="#section2" data-transition="slide">Section 2</a></li>
-			<li><a href="#section3" data-transition="slide">Section 3</a></li>
-			<li><a href="#section4" data-transition="slide">Section 4</a></li>
-			<li><a href="#section5" data-transition="slide">Section 5</a></li>
-			<li><a href="#section6" data-transition="slide">Section 6</a></li>
-			<li><a href="#section7" data-transition="slide">Section 7</a></li>
-			<li><a href="#section8" data-transition="slide">Section 8</a></li>
+			<li><a href="#search" data-transition="slide">Search Data</a></li>
+            <li><a href="#about" data-transition="slide">About Us</a></li>
+			<li><a href="#contact" data-transition="slide">Contact Info</a></li>
 		</ul>		
 	</div>
 	<div data-role="footer" data-theme="b">
@@ -32,22 +102,39 @@
 	</div>
 </div>
 
-<div id="section1" data-role="page" data-theme="b">
-	<div data-role="header" data-theme="b" data-add-back-btn="true" data-transition="slide">
-	  <h1>Section 1</h1>
+<div id="search" data-role="page" data-theme="b">
+	<div data-role="header" data-theme="b" data-add-back-btn="true" data-back-btn-text="Main" data-transition="slide">
+	  <div class="logo"><img src="images/header.png" width="218" height="45" alt=""/></div>
 	</div>
 	<div data-role="content">
 	  <h3>Header</h3>
-	  <p> This is an updated page.  It Works!!!  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec massa tincidunt, porttitor enim sit amet, pellentesque nunc. Proin varius mollis ultricies. In aliquam dapibus orci, quis dictum dui sollicitudin vel. Vivamus nec malesuada leo. Nulla est orci, ornare ut ultricies a, bibendum in sem. Donec convallis pharetra ligula in malesuada. Ut hendrerit dui et aliquam dignissim. Aenean a metus eget felis tempor pellentesque nec iaculis ipsum. </p>
-	  <h3>Header</h3>
-	  <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec massa tincidunt, porttitor enim sit amet, pellentesque nunc. Proin varius mollis ultricies. In aliquam dapibus orci, quis dictum dui sollicitudin vel. Vivamus nec malesuada leo. Nulla est orci, ornare ut ultricies a, bibendum in sem. Donec convallis pharetra ligula in malesuada. Ut hendrerit dui et aliquam dignissim. Aenean a metus eget felis tempor pellentesque nec iaculis ipsum. </p>
+      <select id="unit" name="unit">
+      	<option value="NONE">Select Unit</option>
+      	<option value="02">02</option>
+      	<option value="25">25</option>
+      	<option value="33">33</option>
+      	<option value="45">45</option>
+      </select>
+      <select name="code" id="code">
+      	<option value="NONE">Select Sample Point</option>
+      </select>
+      <select id="test" name="test">
+      	<option value="NONE">Select Test</option>
+      	<option value="D4259">API Gravity/Density</option>
+      	<option value="D86">Distillation</option>
+      	<option value="D93">Pensky Martens Flash</option>
+      </select>
+      <select id="det" name="det">
+      	<option value="NONE">Select Determinant</option>
+      </select>
+        
 	</div>
 	<div data-role="footer" data-theme="b">
 	  <h4>Your App &copy; 2015</h4>
 	</div>
 </div>
 
-<div id="section2" data-role="page" data-theme="b">
+<div id="about" data-role="page" data-theme="b">
 	<div data-role="header" data-theme="b" data-add-back-btn="true" data-transition="slide">
 		<h1>Section 2</h1>
 	</div>
@@ -62,7 +149,7 @@
 	</div>
 </div>
 
-<div id="section3" data-role="page" data-theme="b">
+<div id="contact" data-role="page" data-theme="b">
 	<div data-role="header" data-theme="b" data-add-back-btn="true" data-transition="slide">
 		<h1>Section 3</h1>
 	</div>
@@ -75,77 +162,6 @@
 	<div data-role="footer" data-theme="b">
 	  <h4>Your App &copy; 2015</h4>
 	</div>
-</div>
-
-<div data-role="page" id="section4" data-theme="b">
-	<div data-role="header" data-theme="b" data-add-back-btn="true" data-transition="slide">
-		<h1>Section 4</h1>
-	</div>
-  <div data-role="content">	
-	  <h3>Header</h3>
-	  <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec massa tincidunt, porttitor enim sit amet, pellentesque nunc. Proin varius mollis ultricies. In aliquam dapibus orci, quis dictum dui sollicitudin vel. Vivamus nec malesuada leo. Nulla est orci, ornare ut ultricies a, bibendum in sem. Donec convallis pharetra ligula in malesuada. Ut hendrerit dui et aliquam dignissim. Aenean a metus eget felis tempor pellentesque nec iaculis ipsum. </p>
-	  <h3>Header</h3>
-	  <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec massa tincidunt, porttitor enim sit amet, pellentesque nunc. Proin varius mollis ultricies. In aliquam dapibus orci, quis dictum dui sollicitudin vel. Vivamus nec malesuada leo. Nulla est orci, ornare ut ultricies a, bibendum in sem. Donec convallis pharetra ligula in malesuada. Ut hendrerit dui et aliquam dignissim. Aenean a metus eget felis tempor pellentesque nec iaculis ipsum. </p>
-	</div>
-	<div data-role="footer" data-theme="b">
-		<h4>Your App &copy; 2015</h4>
-	</div>
-</div>
-<div data-role="page" id="section5" data-theme="b">
-	<div data-role="header" data-theme="b" data-add-back-btn="true" data-transition="slide">
-		<h1>Section 5</h1>
-	</div>
-  <div data-role="content">	
-	  <h3>Header</h3>
-	  <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec massa tincidunt, porttitor enim sit amet, pellentesque nunc. Proin varius mollis ultricies. In aliquam dapibus orci, quis dictum dui sollicitudin vel. Vivamus nec malesuada leo. Nulla est orci, ornare ut ultricies a, bibendum in sem. Donec convallis pharetra ligula in malesuada. Ut hendrerit dui et aliquam dignissim. Aenean a metus eget felis tempor pellentesque nec iaculis ipsum. </p>
-	  <h3>Header</h3>
-	  <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec massa tincidunt, porttitor enim sit amet, pellentesque nunc. Proin varius mollis ultricies. In aliquam dapibus orci, quis dictum dui sollicitudin vel. Vivamus nec malesuada leo. Nulla est orci, ornare ut ultricies a, bibendum in sem. Donec convallis pharetra ligula in malesuada. Ut hendrerit dui et aliquam dignissim. Aenean a metus eget felis tempor pellentesque nec iaculis ipsum. </p>
-	</div>
-	<div data-role="footer" data-theme="b">
-		<h4>Your App &copy; 2015</h4>
-	</div>
-</div>
-<div data-role="page" id="section6" data-theme="b">
-  <div data-role="header" data-theme="b" data-add-back-btn="true" data-transition="slide">
-    <h1>Section 6</h1>
-  </div>
-  <div data-role="content">
-    <h3>Header</h3>
-    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec massa tincidunt, porttitor enim sit amet, pellentesque nunc. Proin varius mollis ultricies. In aliquam dapibus orci, quis dictum dui sollicitudin vel. Vivamus nec malesuada leo. Nulla est orci, ornare ut ultricies a, bibendum in sem. Donec convallis pharetra ligula in malesuada. Ut hendrerit dui et aliquam dignissim. Aenean a metus eget felis tempor pellentesque nec iaculis ipsum. </p>
-    <h3>Header</h3>
-    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec massa tincidunt, porttitor enim sit amet, pellentesque nunc. Proin varius mollis ultricies. In aliquam dapibus orci, quis dictum dui sollicitudin vel. Vivamus nec malesuada leo. Nulla est orci, ornare ut ultricies a, bibendum in sem. Donec convallis pharetra ligula in malesuada. Ut hendrerit dui et aliquam dignissim. Aenean a metus eget felis tempor pellentesque nec iaculis ipsum. </p>
-  </div>
-  <div data-role="footer" data-theme="b">
-    <h4>Your App &copy; 2015</h4>
-  </div>
-</div>
-<div data-role="page" id="section7" data-theme="b">
-  <div data-role="header" data-theme="b" data-add-back-btn="true" data-transition="slide">
-    <h1>Section 7</h1>
-  </div>
-  <div data-role="content">
-    <h3>Header</h3>
-    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec massa tincidunt, porttitor enim sit amet, pellentesque nunc. Proin varius mollis ultricies. In aliquam dapibus orci, quis dictum dui sollicitudin vel. Vivamus nec malesuada leo. Nulla est orci, ornare ut ultricies a, bibendum in sem. Donec convallis pharetra ligula in malesuada. Ut hendrerit dui et aliquam dignissim. Aenean a metus eget felis tempor pellentesque nec iaculis ipsum. </p>
-    <h3>Header</h3>
-    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec massa tincidunt, porttitor enim sit amet, pellentesque nunc. Proin varius mollis ultricies. In aliquam dapibus orci, quis dictum dui sollicitudin vel. Vivamus nec malesuada leo. Nulla est orci, ornare ut ultricies a, bibendum in sem. Donec convallis pharetra ligula in malesuada. Ut hendrerit dui et aliquam dignissim. Aenean a metus eget felis tempor pellentesque nec iaculis ipsum. </p>
-  </div>
-  <div data-role="footer" data-theme="b">
-    <h4>Your App &copy; 2015</h4>
-  </div>
-</div>
-<div data-role="page" id="section8" data-theme="b">
-  <div data-role="header" data-theme="b" data-add-back-btn="true" data-transition="pop">
-    <h1>Section 8</h1>
-  </div>
-  <div data-role="content">
-    <h3>Header</h3>
-    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec massa tincidunt, porttitor enim sit amet, pellentesque nunc. Proin varius mollis ultricies. In aliquam dapibus orci, quis dictum dui sollicitudin vel. Vivamus nec malesuada leo. Nulla est orci, ornare ut ultricies a, bibendum in sem. Donec convallis pharetra ligula in malesuada. Ut hendrerit dui et aliquam dignissim. Aenean a metus eget felis tempor pellentesque nec iaculis ipsum. </p>
-    <h3>Header</h3>
-    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec massa tincidunt, porttitor enim sit amet, pellentesque nunc. Proin varius mollis ultricies. In aliquam dapibus orci, quis dictum dui sollicitudin vel. Vivamus nec malesuada leo. Nulla est orci, ornare ut ultricies a, bibendum in sem. Donec convallis pharetra ligula in malesuada. Ut hendrerit dui et aliquam dignissim. Aenean a metus eget felis tempor pellentesque nec iaculis ipsum. </p>
-  </div>
-  <div data-role="footer" data-theme="b">
-    <h4>Your App &copy; 2015</h4>
-  </div>
 </div>
 
 </body>
