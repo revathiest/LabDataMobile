@@ -4,12 +4,22 @@
 <title>jQuery Mobile Web App</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<link rel="stylesheet" type="text/css" href="jquery/jquery.mobile-1.4.5.min.css"/>
+<link rel="stylesheet" type="text/css" href="jquery/jquery.mobile-1.4.5.min.css">
 <link href="styles/custom.css" rel="stylesheet" type="text/css"/>
 <script src="jquery/jquery-1.12.3.min.js" type="text/javascript"></script>
 <script src="jquery/jquery.mobile-1.4.5.min.js" type="text/javascript"></script>
 
 <script>
+/*
+This section of code is to mock up the menu system.  In a live system, this would be generated based on data
+pulled from the database.  Any combination of selections can be made and for this application the same set
+of result data will be displayed.
+*/
+
+/*
+This section populates the sample point menu based on the unit that was selected.  On a live system, each
+unit will have it's own set of unique sample points.
+*/
 $(document).ready(function(){
 	$("#unit").change(function(){
 		switch ($("#unit").val()){
@@ -49,7 +59,10 @@ $(document).ready(function(){
 		}
 	});
 });
-
+/*
+This section populates the sample point menu based on the unit that was selected.  On a live system, each
+unit will have it's own set of unique sample points.
+*/
 $(document).ready(function(){
 	$("#test").change(function(){
 		switch ($("#test").val()){
@@ -89,7 +102,6 @@ $(document).ready(function(){
 <div id="main" data-role="page" data-theme="b">
 	<div class="logo"><img src="images/header.png" width="218" height="45" alt=""/>
     </div>
-
   <form method="post" action="temp.asp">
 	<label for="login">Login</label>
     <input type="text" name="login">
@@ -141,7 +153,7 @@ $(document).ready(function(){
       <select id="det" name="det">
       	<option value="NONE"  disabled="true" selected="true">Select Determinant</option>
       </select>
-        
+      <!-- iframe goes here -->
 	</div>
 	<div data-role="footer" data-theme="b">
 	  <h4>Your App &copy; 2015</h4>
@@ -168,7 +180,7 @@ $(document).ready(function(){
     </div>
 	<div data-role="content">
 	  Developer - Kenneth Hart<br>
-      Email Address - kenneth.hart@smail.rasmussen.edu
+      Email - kenneth.hart@smail.rasmussen.edu
       </div>
 	<div data-role="footer" data-theme="b">
 	  <h4>Your App &copy; 2015</h4>
