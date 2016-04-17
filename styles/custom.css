@@ -8,12 +8,21 @@
 	bottom: 0;
 	position: relative;
 }
+.ui-page {
+	height:100%;
+	bottom:0;
+	position:fixed;
+}
 h3, h4 {
 	margin-bottom: 0;
 }
 h3 + p, h4 + p {
 	margin-top: 0;	
 }
-[data-role=page]{height: 100%; position:relative;}
-[data-role=content]{height: 100%;}
+
+div {
+	padding: 10;
+}
+
+[data-role=page]{height: 100%; position:relative; padding: 10; }
 [data-role=footer]{bottom:0; position:absolute; top: auto; width:100%;}

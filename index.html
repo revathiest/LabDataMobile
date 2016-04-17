@@ -11,15 +11,30 @@
 
 </head>
 <body> 
-
-<div id="main" data-role="page" data-theme="b">
-	<div class="logo"><img src="images/header.png" width="218" height="45" alt=""/>
+    <div id="main" data-role="page" data-theme="b">
+        <div class="logo"><img src="images/header.png" width="218" height="45"/>
+        </div>
+        <div id="framediv">
+            <iframe id="dataframe" src="main.html" frameborder="0">
+            </iframe>
+		</div>
+        <div data-role="footer" data-theme="b">
+            <h4>LabData Mobile &copy; 2015</h4>
+        </div>
     </div>
-
-<iframe id="dataframe" src="main.html" style="width:100%; height:100%" frameborder="0"></iframe>
-	<div data-role="footer" data-theme="b">
-	  <h4>LabData Mobile &copy; 2015</h4>
-	</div>
-</div>
 </body>
+        <script>
+		//This is just some global css udpates
+			$("#framediv").css({"padding":"10"});
+	
+		//This is where I set the element widths
+            $("#framediv").width($("#main").width()-3);
+			
+            $("#dataframe").width($("#framediv").width()-3);
+						
+		//This is where I set the element heights
+            $("#framediv").height($("#main").height()-90);
+			
+            $("#dataframe").height($("#framediv").height());
+        </script>
 </html>
