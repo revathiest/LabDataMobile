@@ -1,10 +1,174 @@
-<!doctype html>
+<!DOCTYPE html> 
 <html>
 <head>
-<meta charset="utf-8">
-<title>Untitled Document</title>
-</head>
+<title>jQuery Mobile Web App</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<link rel="stylesheet" type="text/css" href="jquery/jquery.mobile-1.4.5.min.css">
+<link href="styles/custom.css" rel="stylesheet" type="text/css"/>
+<script src="jquery/jquery-1.12.3.min.js" type="text/javascript"></script>
+<script src="jquery/jquery.mobile-1.4.5.min.js" type="text/javascript"></script>
 
-<body>
+<script>
+/*
+This section of code is to mock up the menu system.  In a live system, this would be generated based on data
+pulled from the database.  Any combination of selections can be made and for this application the same set
+of result data will be displayed.
+*/
+
+/*
+This section populates the sample point menu based on the unit that was selected.  On a live system, each
+unit will have it's own set of unique sample points.
+*/
+$(document).ready(function(){
+	$("#unit").change(function(){
+		switch ($("#unit").val()){
+		case "02":
+			$("#code").children().remove();
+			$("#code").append($("<option></option>").val("NONE").html("Select Sample Point").attr("disabled", true));
+			$("#code").append($("<option></option>").val("W16naphtha").html("W-16 Overhead"));
+			$("#code").append($("<option></option>").val("W16diesel").html("W-16 Diesel"));
+			$("#code").append($("<option></option>").val("W27naphtha").html("W-27 Overhead"));
+			$("#code").append($("<option></option>").val("W27kerosene").html("W-27 Kerosene"));
+			break;
+		case "25":
+			$("#code").children().remove();
+			$("#code").append($("<option></option>").val("NONE").html("Select Sample Point").attr("disabled", true));
+			$("#code").append($("<option></option>").val("D2504").html("D-2504 Bottoms"));
+			$("#code").append($("<option></option>").val("D2505").html("D-2505 Side Draw"));
+			break;
+		case "33":
+			$("#code").children().remove();
+			$("#code").append($("<option></option>").val("NONE").html("Select Sample Point").attr("disabled", true));
+			$("#code").append($("<option></option>").val("X765product").html("X-765 Product"));
+			$("#code").append($("<option></option>").val("D457overhead").html("D-457 Overhead"));
+			$("#code").append($("<option></option>").val("W82bottoms").html("W-82 Bottoms"));
+			$("#code").append($("<option></option>").val("W82sidedraw").html("W-82 Side Draw"));
+			break;
+		case "45":
+			$("#code").children().remove();
+			$("#code").append($("<option></option>").val("NONE").html("Select Sample Point").attr("disabled", true));
+			$("#code").append($("<option></option>").val("D451kerosene").html("D-451 Kerosene"));
+			$("#code").append($("<option></option>").val("D457overhead").html("D-457 Overhead"));
+			$("#code").append($("<option></option>").val("X755product").html("X-755 Product"));
+			break;
+		default:
+			$("#code").children().remove();
+			$("#code").append($("<option></option>").val("NONE").html("Select Sample Point").attr("disabled", true));
+			break;
+		}
+	});
+});
+/*
+This section populates the sample point menu based on the unit that was selected.  On a live system, each
+unit will have it's own set of unique sample points.
+*/
+$(document).ready(function(){
+	$("#test").change(function(){
+		switch ($("#test").val()){
+		case "D4259":
+			$("#det").children().remove();
+			$("#det").append($("<option></option>").val("NONE").html("Select Determinant").attr("disabled", true));
+			$("#det").append($("<option></option>").val("api").html("API Gravity"));
+			$("#det").append($("<option></option>").val("density").html("Density"));
+			break;
+		case "D86":
+			$("#det").children().remove();
+			$("#det").append($("<option></option>").val("NONE").html("Select Determinant").attr("disabled", true));
+			$("#det").append($("<option></option>").val("ibp").html("Initial Boiling Point"));
+			$("#det").append($("<option></option>").val("10pct").html("10% Point"));
+			$("#det").append($("<option></option>").val("50pct").html("50% Point"));
+			$("#det").append($("<option></option>").val("90pct").html("90% Point"));
+			$("#det").append($("<option></option>").val("fbp").html("Final Boiling Point"));
+			break;
+		case "D93":
+			$("#det").children().remove();
+			$("#det").append($("<option></option>").val("NONE").html("Select Determinant").attr("disabled", true));
+			$("#det").append($("<option></option>").val("flash").html("Flash Point"));
+			break;
+		default:
+			$("#det").children().remove();
+			$("#det").append($("<option></option>").val("NONE").html("Select Determinant").attr("disabled", true));
+			break;
+		}
+	});
+});
+
+</script>
+
+</head>
+<body> 
+
+
+<div id="login" data-role="page" data-theme="b">
+  <form method="post" action="temp.asp">
+	<label for="login">Login</label>
+    <input type="text" name="login">
+	<label for="passwd">Password</label>
+    <input type="text" name="passwd">
+    <a href="#page" class="ui-btn">Submit</a>
+  </form>
+ </div>
+
+<div id="page" data-role="page" data-theme="b">
+    <div data-role="content">
+        <ul data-role="listview" data-theme="c">
+            <li><a href="#search" data-transition="slide">Search Data</a></li>
+            <li><a href="#about" data-transition="slide">About Us</a></li>
+            <li><a href="#contact" data-transition="slide">Contact Info</a></li>
+        </ul>
+    </div>
+</div>
+
+<div id="search" data-role="page" data-theme="b">
+	<div data-role="header" data-theme="b" data-add-back-btn="true" data-transition="slide">	
+	  <h3>Search Data</h3>
+    </div>
+	<div data-role="content">
+      <select id="unit" name="unit">
+      	<option value="NONE" disabled="true" selected="true">Select Unit</option>
+      	<option value="02">02</option>
+      	<option value="25">25</option>
+      	<option value="33">33</option>
+      	<option value="45">45</option>
+      </select>
+      <select name="code" id="code">
+      	<option value="NONE"  disabled="true" selected="true">Select Sample Point</option>
+      </select>
+      <select id="test" name="test">
+      	<option value="NONE" disabled="true" selected="true">Select Test</option>
+      	<option value="D4259">API Gravity/Density</option>
+      	<option value="D86">Distillation</option>
+      	<option value="D93">Pensky Martens Flash</option>
+      </select>
+      <select id="det" name="det">
+      	<option value="NONE"  disabled="true" selected="true">Select Determinant</option>
+      </select>
+      <iframe id="dataframe" src="data.html" style="width:100%; height:100%" frameborder="0"></iframe>
+	</div>
+</div>
+
+<div id="about" data-role="page" data-theme="b">
+	<div data-role="header" data-theme="b" data-add-back-btn="true" data-transition="slide">
+      <h3>About Us</h3>
+    </div>
+	<div data-role="content">
+	  <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec massa tincidunt, porttitor enim sit amet, pellentesque nunc. Proin varius mollis ultricies. In aliquam dapibus orci, quis dictum dui sollicitudin vel. Vivamus nec malesuada leo. Nulla est orci, ornare ut ultricies a, bibendum in sem. Donec convallis pharetra ligula in malesuada. Ut hendrerit dui et aliquam dignissim. Aenean a metus eget felis tempor pellentesque nec iaculis ipsum. </p>
+	</div>
+	<div data-role="footer" data-theme="b">
+		<h4>Your App &copy; 2015</h4>
+	</div>
+</div>
+
+<div id="contact" data-role="page" data-theme="b">
+
+	<div data-role="header" data-theme="b" data-add-back-btn="true" data-transition="slide">	
+	  <h3>Contact Info</h3>
+    </div>
+	<div data-role="content">
+	  Developer - Kenneth Hart<br>
+      Email - kenneth.hart@smail.rasmussen.edu
+      </div>
+</div>
 </body>
 </html>
