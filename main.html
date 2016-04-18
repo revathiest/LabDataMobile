@@ -25,8 +25,7 @@ $(document).ready(function(){
 		switch ($("#unit").val()){
 		case "02":
 			$("#code").children().remove();
-			$("#code").append($("<option></option>").val("NONE").html("Select Sample Point").attr("disabled", true));
-			$("#code").append($("<option></option>").val("NONE").html("Select Sample Point").attr("selected", true));
+			$("#code").append($("<option></option>").val("NONE").html("Select Sample Point").attr({"disabled": true, "selected": true}));
 			$("#code").append($("<option></option>").val("W16naphtha").html("W-16 Overhead"));
 			$("#code").append($("<option></option>").val("W16diesel").html("W-16 Diesel"));
 			$("#code").append($("<option></option>").val("W27naphtha").html("W-27 Overhead"));
@@ -34,15 +33,13 @@ $(document).ready(function(){
 			break;
 		case "25":
 			$("#code").children().remove();
-			$("#code").append($("<option></option>").val("NONE").html("Select Sample Point").attr("disabled", true));
-			$("#code").append($("<option></option>").val("NONE").html("Select Sample Point").attr("selected", true));
+			$("#code").append($("<option></option>").val("NONE").html("Select Sample Point").attr({"disabled": true, "selected": true}));
 			$("#code").append($("<option></option>").val("D2504").html("D-2504 Bottoms"));
 			$("#code").append($("<option></option>").val("D2505").html("D-2505 Side Draw"));
 			break;
 		case "33":
 			$("#code").children().remove();
-			$("#code").append($("<option></option>").val("NONE").html("Select Sample Point").attr("disabled", true));
-			$("#code").append($("<option></option>").val("NONE").html("Select Sample Point").attr("selected", true));
+			$("#code").append($("<option></option>").val("NONE").html("Select Sample Point").attr({"disabled": true, "selected": true}));
 			$("#code").append($("<option></option>").val("X765product").html("X-765 Product"));
 			$("#code").append($("<option></option>").val("D457overhead").html("D-457 Overhead"));
 			$("#code").append($("<option></option>").val("W82bottoms").html("W-82 Bottoms"));
@@ -50,16 +47,14 @@ $(document).ready(function(){
 			break;
 		case "45":
 			$("#code").children().remove();
-			$("#code").append($("<option></option>").val("NONE").html("Select Sample Point").attr("disabled", true));
-			$("#code").append($("<option></option>").val("NONE").html("Select Sample Point").attr("selected", true));
+			$("#code").append($("<option></option>").val("NONE").html("Select Sample Point").attr({"disabled": true, "selected": true}));
 			$("#code").append($("<option></option>").val("D451kerosene").html("D-451 Kerosene"));
 			$("#code").append($("<option></option>").val("D457overhead").html("D-457 Overhead"));
 			$("#code").append($("<option></option>").val("X755product").html("X-755 Product"));
 			break;
 		default:
 			$("#code").children().remove();
-			$("#code").append($("<option></option>").val("NONE").html("Select Sample Point").attr("disabled", true));
-			$("#code").append($("<option></option>").val("NONE").html("Select Sample Point").attr("selected", true));
+			$("#code").append($("<option></option>").val("NONE").html("Select Sample Point").attr({"disabled": true, "selected": true}));
 			break;
 		}
 	});
@@ -73,15 +68,13 @@ $(document).ready(function(){
 		switch ($("#test").val()){
 		case "D4259":
 			$("#det").children().remove();
-			$("#det").append($("<option></option>").val("NONE").html("Select Determinant").attr("disabled", true));
-			$("#det").append($("<option></option>").val("NONE").html("Select Determinant").attr("selected", true));
+			$("#det").append($("<option></option>").val("NONE").html("Select Determinant").attr({"disabled": true, "selected": true}));
 			$("#det").append($("<option></option>").val("api").html("API Gravity"));
 			$("#det").append($("<option></option>").val("density").html("Density"));
 			break;
 		case "D86":
 			$("#det").children().remove();
-			$("#det").append($("<option></option>").val("NONE").html("Select Determinant").attr("disabled", true));
-			$("#det").append($("<option></option>").val("NONE").html("Select Determinant").attr("selected", true));
+			$("#det").append($("<option></option>").val("NONE").html("Select Determinant").attr({"disabled": true, "selected": true}));
 			$("#det").append($("<option></option>").val("ibp").html("Initial Boiling Point"));
 			$("#det").append($("<option></option>").val("10pct").html("10% Point"));
 			$("#det").append($("<option></option>").val("50pct").html("50% Point"));
@@ -90,14 +83,12 @@ $(document).ready(function(){
 			break;
 		case "D93":
 			$("#det").children().remove();
-			$("#det").append($("<option></option>").val("NONE").html("Select Determinant").attr("disabled", true));
-			$("#det").append($("<option></option>").val("NONE").html("Select Determinant").attr("selected", true));
+			$("#det").append($("<option></option>").val("NONE").html("Select Determinant").attr({"disabled": true, "selected": true}));
 			$("#det").append($("<option></option>").val("flash").html("Flash Point"));
 			break;
 		default:
 			$("#det").children().remove();
-			$("#det").append($("<option></option>").val("NONE").html("Select Determinant").attr("disabled", true));
-			$("#det").append($("<option></option>").val("NONE").html("Select Determinant").attr("selected", true));
+			$("#det").append($("<option></option>").val("NONE").html("Select Determinant").attr({"disabled": true, "selected": true}));
 			break;
 		}
 	});
