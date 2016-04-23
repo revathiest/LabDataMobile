@@ -26,3 +26,40 @@ div {
 
 [data-role=page]{height: 100%; position:relative; padding: 10; }
 [data-role=footer]{bottom:0; position:absolute; top: auto; width:100%;}
+
+
+/*
+This was retreived from http://stackoverflow.com/questions/9717078/2-radio-buttons-on-same-line-in-jquery-mobile-and-dispaly-phone-number-field
+It is used to make inline radio buttons with jquery
+*/
+.floatleft {
+    float:left;
+ }
+.floatright {
+    float:right;
+ }
+.forceinline{  /* Prevent fieldcontain from doing a BLOCK thing */
+    display:inline !important;
+}
+.textwidth {  /* limit width of input fields */
+    width:80px;
+}
+.closespacing { /* controls spacing between elements */
+    margin:0px 5px 0px 0px;
+ }
+.bigselect {   /* centers select with big buttons */
+    padding: 0px;
+    margin:2px 5px 0px 0px;
+ }
+.biginputheight {   /* matches text input height to big buttons */
+    padding-top:10px !important;
+    padding-bottom:12px !important;
+}
+.miniinputheight { /* matches text input height to minibuttons */
+    padding-top:5px !important;
+    padding-bottom:5px !important;
+}
+.center{ /* centers without knowing height or width */
+    position: absolute;
+    left: 50%
+}

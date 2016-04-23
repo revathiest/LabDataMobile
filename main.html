@@ -9,6 +9,8 @@
 <script src="jquery/jquery-1.12.3.min.js" type="text/javascript"></script>
 <script src="jquery/jquery.mobile-1.4.5.min.js" type="text/javascript"></script>
 
+
+
 <script>
 /*
 This section of code is to mock up the menu system.  In a live system, this would be generated based on data
@@ -18,7 +20,7 @@ of result data will be displayed.
 
 /*
 This section populates the sample point menu based on the unit that was selected.  On a live system, each
-unit will have it's own set of unique sample points.
+unit will have it"s own set of unique sample points.
 */
 $(document).ready(function(){
 	$("#unit").change(function(){
@@ -61,7 +63,7 @@ $(document).ready(function(){
 });
 /*
 This section populates the sample point menu based on the unit that was selected.  On a live system, each
-unit will have it's own set of unique sample points.
+unit will have it"s own set of unique sample points.
 */
 $(document).ready(function(){
 	$("#test").change(function(){
@@ -102,11 +104,11 @@ $(document).ready(function(){
 
 <div id="login" data-role="page" data-theme="b">
   <form method="post" action="temp.asp">
-	<label for="login">Login</label>
+	<label for="username">Username</label>
     <input type="text" name="login">
 	<label for="passwd">Password</label>
-    <input type="text" name="passwd">
-    <a href="#main" class="ui-btn">Submit</a>
+    <input type="password" name="passwd">
+    <a href="#main" class="ui-btn">Login</a>
   </form>
  </div>
 
@@ -118,7 +120,7 @@ $(document).ready(function(){
             <li><a href="#contact" data-transition="slide">Contact Info</a></li>
         </ul>
     </div>
-</div>
+ </div>
 
 <div id="search" data-role="page" data-theme="b">
 	<div data-role="header" data-theme="b">	
@@ -149,6 +151,20 @@ $(document).ready(function(){
           <iframe id="dataframe" src="data.html"  frameborder="0">
           </iframe>
 	  </div>
+      <table id="radioline" name="radioline">
+      	<tr>
+        	<td width="50%">
+      			<input type="radio" name="display" id="chart"/>
+     			<label for="chart">Chart</label>
+			</td>
+        	<td width="50%">
+      			<input type="radio" name="display" id="data"/>
+     			<label for="data">Data</label>
+        	</td>
+        </tr>
+      </table>
+
+
 	</div>
 </div>
 
@@ -171,25 +187,27 @@ $(document).ready(function(){
 	<div data-role="content">
 	  Developer - Kenneth Hart<br>
       Email - kenneth.hart@smail.rasmussen.edu
-      </div>
+    </div>
 </div>
 </body>
-        <script>
-	
-		//This is where I set the element widths
-		//This is just some global css udpates
-			$("#framediv").css({"padding":"10"});
-	
-		//This is where I set the element widths
-            $("#framediv").width($("#main").width()-30);
-			
-            $("#dataframe").width($("#framediv").width()-3);
-			
-			
-		//This is where I set the element heights
-            $("#framediv").height($("#main").height()-320);
-			
-            $("#dataframe").height($("#framediv").height());
-        </script>
 
+<script>
+
+//This is where I set the element widths
+//This is just some global css udpates
+	$("#framediv").css({"padding":"10"});
+
+//This is where I set the element widths
+	$("#framediv").width($("#main").width()-30);
+	
+	$("#dataframe").width($("#framediv").width()-3);
+	
+	
+//This is where I set the element heights
+	$("#framediv").height($("#main").height()-380);
+	
+	$("#dataframe").height($("#framediv").height());
+	
+	$("#radioline").width($("#main").width());
+</script>
 </html>
