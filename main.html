@@ -139,6 +139,16 @@ $(document).ready(function(){
 
 </script>
 <script>
+function dispdata(){
+	document.getElementById("dataframe").src="data.html";
+}
+</script>
+<script>
+function dispchart(){
+	document.getElementById("dataframe").src="chart.html";
+}
+</script>
+<script>
 function logout(){
 	document.getElementById("username").value = "";
 	document.getElementById("passwd").value = "";
@@ -205,18 +215,18 @@ function logout(){
       	<option value="NONE"  disabled="true" selected="true">Select Determinant</option>
       </select>
       <div id="trenddiv">
-          <iframe id="dataframe" src="data.html"  frameborder="0">
+          <iframe id="dataframe" src="data.html" frameborder="0">
           </iframe>
 	  </div>
       <table id="radioline" name="radioline">
       	<tr>
         	<td width="50%">
-      			<input type="radio" name="display" id="chart"/>
-     			<label for="chart">Chart</label>
+      			<input type="radio" name="display" id="chart"  onclick="dispchart()"/>
+     			<label for="chart" onclick="dispchart()">Chart</label>
 			</td>
         	<td width="50%">
-      			<input type="radio" name="display" id="data"/>
-     			<label for="data">Data</label>
+      			<input type="radio" name="display" id="data" onclick="dispdata()"/>
+     			<label for="data" onclick="dispdata()">Data</label>
         	</td>
         </tr>
       </table>
@@ -252,7 +262,7 @@ function logout(){
           </table>
         </form>
       <div id="rptdiv">
-          <iframe id="rptframe" src="data.html"  frameborder="0">
+          <iframe id="rptframe" src="report.html"  frameborder="0">
           </iframe>
 	  </div>
 	</div>
@@ -285,26 +295,27 @@ function logout(){
 
 //This is where I set the element widths
 //This is just some global css udpates
-	$("#framediv").css({"padding":"10"});
+	$("#trenddiv").css({"padding":"10"});
+	$("#rptdiv").css({"padding":"10"});
 
 //This is where I set the element widths
-	$("#framediv").width($("#main").width()-30);
+	$("#trenddiv").width($("#main").width()-30);
 	
-	$("#dataframe").width($("#framediv").width()-3);
+	$("#dataframe").width($("#trenddiv").width()-3);
 	
 	$("#rptdiv").width($("#main").width()-30);
 	
-	$("#rptframe").width($("#framediv").width()-3);
+	$("#rptframe").width($("#rptdiv").width()-3);
 	
 	
 //This is where I set the element heights
-	$("#framediv").height($("#main").height()-380);
+	$("#trenddiv").height($("#main").height()-380);
 	
-	$("#dataframe").height($("#framediv").height());
+	$("#dataframe").height($("#trenddiv").height());
 	
 	$("#rptdiv").height($("#main").height()-380);
 	
-	$("#rptframe").height($("#framediv").height());
+	$("#rptframe").height($("#rptdiv").height());
 	
 	$("#radioline").width($("#main").width());
 </script>
