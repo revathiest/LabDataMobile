@@ -120,9 +120,18 @@ $(document).ready(function(){
             <li><a href="#contact" data-transition="slide">Contact Info</a></li>
         </ul>
     </div>
- </div>
+</div>
 
 <div id="search" data-role="page" data-theme="b">
+    <div data-role="content">
+        <ul data-role="listview" data-theme="c">
+            <li><a href="#trend" data-transition="slide">Result Trend</a></li>
+            <li><a href="#report" data-transition="slide">Sample Report</a></li>
+        </ul>
+    </div>
+</div>
+
+<div id="trend" data-role="page" data-theme="b">
 	<div data-role="header" data-theme="b">	
     <a href="#main" class="ui-btn" data-transition="slide" data-direction="reverse">Back</a>
 	  <h3>Search Data</h3>
@@ -147,7 +156,7 @@ $(document).ready(function(){
       <select id="det" name="det">
       	<option value="NONE"  disabled="true" selected="true">Select Determinant</option>
       </select>
-      <div id="framediv">
+      <div id="trenddiv">
           <iframe id="dataframe" src="data.html"  frameborder="0">
           </iframe>
 	  </div>
@@ -163,8 +172,41 @@ $(document).ready(function(){
         	</td>
         </tr>
       </table>
+	</div>
+</div>
 
-
+<div id="report" data-role="page" data-theme="b">
+	<div data-role="header" data-theme="b">	
+    <a href="#main" class="ui-btn" data-transition="slide" data-direction="reverse">Back</a>
+	  <h3>Search Data</h3>
+    </div>
+	<div data-role="content">
+        <form>
+          <select id="rptunit" name="rptunit">
+            <option value="NONE" disabled="true" selected="true">Select Unit</option>
+            <option value="02">02</option>
+            <option value="25">25</option>
+            <option value="33">33</option>
+            <option value="45">45</option>
+          </select>
+          <select name="rptcode" id="rptcode">
+            <option value="NONE"  disabled="true" selected="true">Select Sample Point</option>
+          </select>
+          <table>
+            <tr>
+                <td>Start Date:</td>
+                <td><input id="start" name="start" type="date"/></td>
+            </tr>
+            <tr>
+			  <td>End Date:</td>
+              <td><input id="end" name="end" type="date"/></td>
+            </tr>
+          </table>
+        </form>
+      <div id="rptdiv">
+          <iframe id="rptframe" src="data.html"  frameborder="0">
+          </iframe>
+	  </div>
 	</div>
 </div>
 
@@ -202,11 +244,19 @@ $(document).ready(function(){
 	
 	$("#dataframe").width($("#framediv").width()-3);
 	
+	$("#rptdiv").width($("#main").width()-30);
+	
+	$("#rptframe").width($("#framediv").width()-3);
+	
 	
 //This is where I set the element heights
 	$("#framediv").height($("#main").height()-380);
 	
 	$("#dataframe").height($("#framediv").height());
+	
+	$("#rptdiv").height($("#main").height()-380);
+	
+	$("#rptframe").height($("#framediv").height());
 	
 	$("#radioline").width($("#main").width());
 </script>
