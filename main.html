@@ -61,6 +61,47 @@ $(document).ready(function(){
 		}
 	});
 });
+
+$(document).ready(function(){
+	$("#rptunit").change(function(){
+		switch ($("#rptunit").val()){
+		case "02":
+			$("#rptcode").children().remove();
+			$("#rptcode").append($("<option></option>").val("NONE").html("Select Sample Point").attr({"disabled": true, "selected": true}));
+			$("#rptcode").append($("<option></option>").val("W16naphtha").html("W-16 Overhead"));
+			$("#rptcode").append($("<option></option>").val("W16diesel").html("W-16 Diesel"));
+			$("#rptcode").append($("<option></option>").val("W27naphtha").html("W-27 Overhead"));
+			$("#rptcode").append($("<option></option>").val("W27kerosene").html("W-27 Kerosene"));
+			break;
+		case "25":
+			$("#rptcode").children().remove();
+			$("#rptcode").append($("<option></option>").val("NONE").html("Select Sample Point").attr({"disabled": true, "selected": true}));
+			$("#rptcode").append($("<option></option>").val("D2504").html("D-2504 Bottoms"));
+			$("#rptcode").append($("<option></option>").val("D2505").html("D-2505 Side Draw"));
+			break;
+		case "33":
+			$("#rptcode").children().remove();
+			$("#rptcode").append($("<option></option>").val("NONE").html("Select Sample Point").attr({"disabled": true, "selected": true}));
+			$("#rptcode").append($("<option></option>").val("X765product").html("X-765 Product"));
+			$("#rptcode").append($("<option></option>").val("D457overhead").html("D-457 Overhead"));
+			$("#rptcode").append($("<option></option>").val("W82bottoms").html("W-82 Bottoms"));
+			$("#rptcode").append($("<option></option>").val("W82sidedraw").html("W-82 Side Draw"));
+			break;
+		case "45":
+			$("#rptcode").children().remove();
+			$("#rptcode").append($("<option></option>").val("NONE").html("Select Sample Point").attr({"disabled": true, "selected": true}));
+			$("#rptcode").append($("<option></option>").val("D451kerosene").html("D-451 Kerosene"));
+			$("#rptcode").append($("<option></option>").val("D457overhead").html("D-457 Overhead"));
+			$("#rptcode").append($("<option></option>").val("X755product").html("X-755 Product"));
+			break;
+		default:
+			$("#rptcode").children().remove();
+			$("#rptcode").append($("<option></option>").val("NONE").html("Select Sample Point").attr({"disabled": true, "selected": true}));
+			break;
+		}
+	});
+});
+
 /*
 This section populates the sample point menu based on the unit that was selected.  On a live system, each
 unit will have it"s own set of unique sample points.
@@ -97,6 +138,12 @@ $(document).ready(function(){
 });
 
 </script>
+<script>
+function logout(){
+	document.getElementById("username").value = "";
+	document.getElementById("passwd").value = "";
+}
+</script>
 
 </head>
 <body> 
@@ -105,9 +152,9 @@ $(document).ready(function(){
 <div id="login" data-role="page" data-theme="b">
   <form method="post" action="temp.asp">
 	<label for="username">Username</label>
-    <input type="text" name="login">
+    <input type="text" name="username" id="username">
 	<label for="passwd">Password</label>
-    <input type="password" name="passwd">
+    <input type="password" name="passwd" id="passwd">
     <a href="#main" class="ui-btn">Login</a>
   </form>
  </div>
@@ -118,6 +165,7 @@ $(document).ready(function(){
             <li><a href="#search" data-transition="slide">Search Data</a></li>
             <li><a href="#about" data-transition="slide">About Us</a></li>
             <li><a href="#contact" data-transition="slide">Contact Info</a></li>
+            <li><a href="#login" data-transition="slide" onclick="logout()">Logout</a></li>
         </ul>
     </div>
 </div>
