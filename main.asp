@@ -28,31 +28,31 @@ $(document).ready(function(){
 		case "02":
 			$("#code").children().remove();
 			$("#code").append($("<option></option>").val("NONE").html("Select Sample Point").attr({"disabled": true, "selected": true}));
-			$("#code").append($("<option></option>").val("W16naphtha").html("W-16 Overhead"));
-			$("#code").append($("<option></option>").val("W16diesel").html("W-16 Diesel"));
-			$("#code").append($("<option></option>").val("W27naphtha").html("W-27 Overhead"));
-			$("#code").append($("<option></option>").val("W27kerosene").html("W-27 Kerosene"));
+			$("#code").append($("<option></option>").val("W-16 Naphtha").html("W-16 Overhead"));
+			$("#code").append($("<option></option>").val("W-16 Diesel").html("W-16 Diesel"));
+			$("#code").append($("<option></option>").val("W-27 Naphtha").html("W-27 Overhead"));
+			$("#code").append($("<option></option>").val("W-27 Kerosene").html("W-27 Kerosene"));
 			break;
 		case "25":
 			$("#code").children().remove();
 			$("#code").append($("<option></option>").val("NONE").html("Select Sample Point").attr({"disabled": true, "selected": true}));
-			$("#code").append($("<option></option>").val("D2504").html("D-2504 Bottoms"));
-			$("#code").append($("<option></option>").val("D2505").html("D-2505 Side Draw"));
+			$("#code").append($("<option></option>").val("D-2504 Bottoms").html("D-2504 Bottoms"));
+			$("#code").append($("<option></option>").val("D-2505 Side Draw").html("D-2505 Side Draw"));
 			break;
 		case "33":
 			$("#code").children().remove();
 			$("#code").append($("<option></option>").val("NONE").html("Select Sample Point").attr({"disabled": true, "selected": true}));
-			$("#code").append($("<option></option>").val("X765product").html("X-765 Product"));
-			$("#code").append($("<option></option>").val("D457overhead").html("D-457 Overhead"));
-			$("#code").append($("<option></option>").val("W82bottoms").html("W-82 Bottoms"));
-			$("#code").append($("<option></option>").val("W82sidedraw").html("W-82 Side Draw"));
+			$("#code").append($("<option></option>").val("X-765 Product").html("X-765 Product"));
+			$("#code").append($("<option></option>").val("D-457 Overhead").html("D-457 Overhead"));
+			$("#code").append($("<option></option>").val("W-82 Bottoms").html("W-82 Bottoms"));
+			$("#code").append($("<option></option>").val("W-82 Side Draw").html("W-82 Side Draw"));
 			break;
 		case "45":
 			$("#code").children().remove();
 			$("#code").append($("<option></option>").val("NONE").html("Select Sample Point").attr({"disabled": true, "selected": true}));
-			$("#code").append($("<option></option>").val("D451kerosene").html("D-451 Kerosene"));
-			$("#code").append($("<option></option>").val("D457overhead").html("D-457 Overhead"));
-			$("#code").append($("<option></option>").val("X755product").html("X-755 Product"));
+			$("#code").append($("<option></option>").val("D-451 Kerosene").html("D-451 Kerosene"));
+			$("#code").append($("<option></option>").val("D-457 Overhead").html("D-457 Overhead"));
+			$("#code").append($("<option></option>").val("X-755 Product").html("X-755 Product"));
 			break;
 		default:
 			$("#code").children().remove();
@@ -68,31 +68,31 @@ $(document).ready(function(){
 		case "02":
 			$("#rptcode").children().remove();
 			$("#rptcode").append($("<option></option>").val("NONE").html("Select Sample Point").attr({"disabled": true, "selected": true}));
-			$("#rptcode").append($("<option></option>").val("W16naphtha").html("W-16 Overhead"));
-			$("#rptcode").append($("<option></option>").val("W16diesel").html("W-16 Diesel"));
-			$("#rptcode").append($("<option></option>").val("W27naphtha").html("W-27 Overhead"));
-			$("#rptcode").append($("<option></option>").val("W27kerosene").html("W-27 Kerosene"));
+			$("#rptcode").append($("<option></option>").val("W-16 Naphtha").html("W-16 Overhead"));
+			$("#rptcode").append($("<option></option>").val("W-16 Diesel").html("W-16 Diesel"));
+			$("#rptcode").append($("<option></option>").val("W-27 Naphtha").html("W-27 Overhead"));
+			$("#rptcode").append($("<option></option>").val("W-27 Kerosene").html("W-27 Kerosene"));
 			break;
 		case "25":
 			$("#rptcode").children().remove();
 			$("#rptcode").append($("<option></option>").val("NONE").html("Select Sample Point").attr({"disabled": true, "selected": true}));
-			$("#rptcode").append($("<option></option>").val("D2504").html("D-2504 Bottoms"));
-			$("#rptcode").append($("<option></option>").val("D2505").html("D-2505 Side Draw"));
+			$("#rptcode").append($("<option></option>").val("D-2504 Bottoms").html("D-2504 Bottoms"));
+			$("#rptcode").append($("<option></option>").val("D-2505 Side Draw").html("D-2505 Side Draw"));
 			break;
 		case "33":
 			$("#rptcode").children().remove();
 			$("#rptcode").append($("<option></option>").val("NONE").html("Select Sample Point").attr({"disabled": true, "selected": true}));
-			$("#rptcode").append($("<option></option>").val("X765product").html("X-765 Product"));
-			$("#rptcode").append($("<option></option>").val("D457overhead").html("D-457 Overhead"));
-			$("#rptcode").append($("<option></option>").val("W82bottoms").html("W-82 Bottoms"));
-			$("#rptcode").append($("<option></option>").val("W82sidedraw").html("W-82 Side Draw"));
+			$("#rptcode").append($("<option></option>").val("X-765 Product").html("X-765 Product"));
+			$("#rptcode").append($("<option></option>").val("D-457 Overhead").html("D-457 Overhead"));
+			$("#rptcode").append($("<option></option>").val("W-82 Bottoms").html("W-82 Bottoms"));
+			$("#rptcode").append($("<option></option>").val("W-82 Side Draw").html("W-82 Side Draw"));
 			break;
 		case "45":
 			$("#rptcode").children().remove();
 			$("#rptcode").append($("<option></option>").val("NONE").html("Select Sample Point").attr({"disabled": true, "selected": true}));
-			$("#rptcode").append($("<option></option>").val("D451kerosene").html("D-451 Kerosene"));
-			$("#rptcode").append($("<option></option>").val("D457overhead").html("D-457 Overhead"));
-			$("#rptcode").append($("<option></option>").val("X755product").html("X-755 Product"));
+			$("#rptcode").append($("<option></option>").val("D-451 Kerosene").html("D-451 Kerosene"));
+			$("#rptcode").append($("<option></option>").val("D-457 Overhead").html("D-457 Overhead"));
+			$("#rptcode").append($("<option></option>").val("X-755 Product").html("X-755 Product"));
 			break;
 		default:
 			$("#rptcode").children().remove();
@@ -109,25 +109,25 @@ unit will have it"s own set of unique sample points.
 $(document).ready(function(){
 	$("#test").change(function(){
 		switch ($("#test").val()){
-		case "D4259":
+		case "D-4259":
 			$("#det").children().remove();
 			$("#det").append($("<option></option>").val("NONE").html("Select Determinant").attr({"disabled": true, "selected": true}));
-			$("#det").append($("<option></option>").val("api").html("API Gravity"));
-			$("#det").append($("<option></option>").val("density").html("Density"));
+			$("#det").append($("<option></option>").val("API Gravity").html("API Gravity"));
+			$("#det").append($("<option></option>").val("Density").html("Density"));
 			break;
-		case "D86":
+		case "D-86":
 			$("#det").children().remove();
 			$("#det").append($("<option></option>").val("NONE").html("Select Determinant").attr({"disabled": true, "selected": true}));
-			$("#det").append($("<option></option>").val("ibp").html("Initial Boiling Point"));
-			$("#det").append($("<option></option>").val("10pct").html("10% Point"));
-			$("#det").append($("<option></option>").val("50pct").html("50% Point"));
-			$("#det").append($("<option></option>").val("90pct").html("90% Point"));
-			$("#det").append($("<option></option>").val("fbp").html("Final Boiling Point"));
+			$("#det").append($("<option></option>").val("IBP").html("Initial Boiling Point"));
+			$("#det").append($("<option></option>").val("10%").html("10% Point"));
+			$("#det").append($("<option></option>").val("50%").html("50% Point"));
+			$("#det").append($("<option></option>").val("90%").html("90% Point"));
+			$("#det").append($("<option></option>").val("FBP").html("Final Boiling Point"));
 			break;
-		case "D93":
+		case "D-93":
 			$("#det").children().remove();
 			$("#det").append($("<option></option>").val("NONE").html("Select Determinant").attr({"disabled": true, "selected": true}));
-			$("#det").append($("<option></option>").val("flash").html("Flash Point"));
+			$("#det").append($("<option></option>").val("Flash").html("Flash Point"));
 			break;
 		default:
 			$("#det").children().remove();
@@ -139,16 +139,14 @@ $(document).ready(function(){
 
 </script>
 <script>
-function dispdata(){
-	document.getElementById("dataframe").src="data.html";
+function dispdata(unit, code, test, det){
+    document.getElementById("dataframe").src="data.asp?unit="+unit+"&code='"+code+"'&test='"+test+"'&det='"+det+"'";
 }
-</script>
-<script>
+
 function dispchart(){
 	document.getElementById("dataframe").src="chart.html";
 }
-</script>
-<script>
+
 function logout(){
 	document.getElementById("username").value = "";
 	document.getElementById("passwd").value = "";
@@ -195,9 +193,10 @@ function logout(){
 	  <h3>Search Data</h3>
     </div>
 	<div data-role="content">
+      <form id="trendform">
       <select id="unit" name="unit">
       	<option value="NONE" disabled="true" selected="true">Select Unit</option>
-      	<option value="02">02</option>
+      	<option value="2">02</option>
       	<option value="25">25</option>
       	<option value="33">33</option>
       	<option value="45">45</option>
@@ -207,30 +206,31 @@ function logout(){
       </select>
       <select id="test" name="test">
       	<option value="NONE" disabled="true" selected="true">Select Test</option>
-      	<option value="D4259">API Gravity/Density</option>
-      	<option value="D86">Distillation</option>
-      	<option value="D93">Pensky Martens Flash</option>
+      	<option value="D-4259">API Gravity/Density</option>
+      	<option value="D-86">Distillation</option>
+      	<option value="D-93">Pensky Martens Flash</option>
       </select>
       <select id="det" name="det">
       	<option value="NONE"  disabled="true" selected="true">Select Determinant</option>
       </select>
       <div id="trenddiv">
-          <iframe id="dataframe" src="data.html" frameborder="0" scrolling="no">
+          <iframe id="dataframe" src="blank.html" frameborder="0" scrolling="no">
           </iframe>
 	  </div>
       <table id="radioline" name="radioline">
       	<tr>
         	<td width="50%">
       			<input type="radio" name="display" id="chart"  onclick="dispchart()"/>
-     			<label for="chart" onclick="dispchart()">Chart</label>
+     			<label for="chart"">Chart</label>
 			</td>
         	<td width="50%">
-      			<input type="radio" name="display" id="data" onclick="dispdata()"/>
-     			<label for="data" onclick="dispdata()">Data</label>
+      			<input type="radio" name="display" id="data" onclick="dispdata(document.getElementById('unit').value, document.getElementById('code').value, document.getElementById('test').value, document.getElementById('det').value)"/>
+     			<label for="data"">Data</label>
         	</td>
         </tr>
       </table>
-	</div>
+	</form>
+    </div>
 </div>
 
 <div id="report" data-role="page" data-theme="b">
