@@ -179,7 +179,7 @@ function logout(){
             <li><a href="#about" data-transition="slide">About Us</a></li>
             <li><a href="#contact" data-transition="slide">Contact Info</a></li>
             <!--
-                <li><a href="#login" data-transition="slide" onclick="logout()">Logout</a></li>
+            <li><a href="#login" data-transition="slide" onclick="logout()">Logout</a></li>
             /-->
         </ul>
     </div>
