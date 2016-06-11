@@ -16,26 +16,26 @@
         <div class="logo"><img src="images/header.png" width="218" height="45"/>
         </div>
         <div id="framediv">
-            <iframe id="dataframe" src="main.asp" frameborder="0">
+            <iframe id="dataframe" src="http://ldm-app.azurewebsites.net/main.asp" frameborder="0">
             </iframe>
 		</div>
         <div data-role="footer" data-theme="b">
             <h4>LabData Mobile &copy; 2015</h4>
         </div>
     </div>
+<script>
+//This is just some global css udpates
+	$("#framediv").css({"padding":"10"});
+
+//This is where I set the element widths
+    $("#framediv").width($("#main").width());
+
+    $("#dataframe").width($("#framediv").width()-20);
+
+//This is where I set the element heights
+    $("#framediv").height($("#main").height()-90);
+
+    $("#dataframe").height($("#framediv").height());
+    </script>
 </body>
-        <script>
-		//This is just some global css udpates
-			$("#framediv").css({"padding":"10"});
-	
-		//This is where I set the element widths
-            $("#framediv").width($("#main").width());
-			
-            $("#dataframe").width($("#framediv").width()-20);
-						
-		//This is where I set the element heights
-            $("#framediv").height($("#main").height()-90);
-			
-            $("#dataframe").height($("#framediv").height());
-        </script>
 </html>

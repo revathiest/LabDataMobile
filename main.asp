@@ -195,29 +195,29 @@ function logout(){
 	<div data-role="content">
       <form id="trendform">
       <select id="unit" name="unit">
-      	<option value="NONE" disabled="true" selected="true">Select Unit</option>
+      	<option value="NONE" disabled selected>Select Unit</option>
       	<option value="2">02</option>
       	<option value="25">25</option>
       	<option value="33">33</option>
       	<option value="45">45</option>
       </select>
       <select name="code" id="code">
-      	<option value="NONE"  disabled="true" selected="true">Select Sample Point</option>
+      	<option value="NONE"  disabled selected>Select Sample Point</option>
       </select>
       <select id="test" name="test">
-      	<option value="NONE" disabled="true" selected="true">Select Test</option>
+      	<option value="NONE" disabled selected>Select Test</option>
       	<option value="D-4259">API Gravity/Density</option>
       	<option value="D-86">Distillation</option>
       	<option value="D-93">Pensky Martens Flash</option>
       </select>
       <select id="det" name="det">
-      	<option value="NONE"  disabled="true" selected="true">Select Determinant</option>
+      	<option value="NONE"  disabled selected>Select Determinant</option>
       </select>
       <div id="trenddiv">
-          <iframe id="dataframe" src="blank.html" frameborder="0" scrolling="no">
+          <iframe id="dataframe" src="blank.html" frameborder="0">
           </iframe>
 	  </div>
-      <table id="radioline" name="radioline">
+      <table id="radioline">
       	<tr>
         	<td width="50%">
       			<input type="radio" name="display" id="chart"  onclick="dispchart()"/>
@@ -241,14 +241,14 @@ function logout(){
 	<div data-role="content">
         <form>
           <select id="rptunit" name="rptunit">
-            <option value="NONE" disabled="true" selected="true">Select Unit</option>
+            <option value="NONE" disabled selected>Select Unit</option>
             <option value="02">02</option>
             <option value="25">25</option>
             <option value="33">33</option>
             <option value="45">45</option>
           </select>
           <select name="rptcode" id="rptcode">
-            <option value="NONE"  disabled="true" selected="true">Select Sample Point</option>
+            <option value="NONE"  disabled selected>Select Sample Point</option>
           </select>
           <table>
             <tr>
@@ -262,7 +262,7 @@ function logout(){
           </table>
         </form>
       <div id="rptdiv">
-          <iframe id="rptframe" src="report.html"  frameborder="0">
+          <iframe id="rptframe" src="report.html">
           </iframe>
 	  </div>
 	</div>
