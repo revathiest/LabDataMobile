@@ -138,7 +138,9 @@ $(document).ready(function(){
 });
 
 </script>
-<script>
+
+<script dir="ltr">
+
 function dispdata(unit, code, test, det){
     document.getElementById("dataframe").src="data.asp?unit="+unit+"&code='"+code+"'&test='"+test+"'&det='"+det+"'";
 }
@@ -151,12 +153,14 @@ function logout(){
 	document.getElementById("username").value = "";
 	document.getElementById("passwd").value = "";
 }
+
 </script>
 
 </head>
+
 <body> 
 
-
+<!--
 <div id="login" data-role="page" data-theme="b">
   <form method="post" action="temp.asp">
 	<label for="username">Username</label>
@@ -166,6 +170,7 @@ function logout(){
     <a href="#main" class="ui-btn">Login</a>
   </form>
  </div>
+/-->
 
 <div id="main" data-role="page" data-theme="b">
     <div data-role="content">
@@ -173,7 +178,9 @@ function logout(){
             <li><a href="#search" data-transition="slide">Search Data</a></li>
             <li><a href="#about" data-transition="slide">About Us</a></li>
             <li><a href="#contact" data-transition="slide">Contact Info</a></li>
-            <li><a href="#login" data-transition="slide" onclick="logout()">Logout</a></li>
+            <!--
+                <li><a href="#login" data-transition="slide" onclick="logout()">Logout</a></li>
+            /-->
         </ul>
     </div>
 </div>
